@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type = "text/css" href="../css/styleHome.css">
+    <link rel="stylesheet" type = "text/css" href="public/css/styleHome.css">
     <title>HOME</title>
 </head>
 
@@ -8,7 +8,7 @@
     <div class="base-container">
         <nav class = "navigate">
             <div class ="logo">
-                <img src="../img/bboardLogoCut.png">
+                <img src="public/img/bboardLogoCut.png">
             </div>
             <div class = "buttons">
                 <button>Moje gry</button>
@@ -23,15 +23,15 @@
             </div>
             <section class = "suggested">
                 <div id = "suggest-1">
-                    <img src="../img/upload/catan.jpg">
+                    <img src="public/img/upload/catan.jpg">
                     <p>description</p>
                 </div>
                 <div id = "suggest-2">
-                    <img src="../img/upload/catan.jpg">
+                    <img src="public/img/upload/catan.jpg">
                     <p>description</p>
                 </div>
                 <div id = "suggest-3">
-                    <img src="../img/upload/catan.jpg">
+                    <img src="public/img/upload/catan.jpg">
                     <p>description</p>
                 </div>
 
