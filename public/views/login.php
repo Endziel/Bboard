@@ -10,10 +10,19 @@
             <img src="public/img/bbLogo1.png">
         </div>
         <div class="login-container">
-            <form>
+            <form class = "login" action="login" method="POST">
+                <div class="messages">
+                    <?php if(isset($messages)){
+                        foreach ($messages as $message){
+                            echo $message;
+
+                        }
+                    }
+                    ?>
+                </div>
                 <input name = "email" type = "text" placeholder="email@email.com">
                 <input name = "password" type = "password" placeholder="hasło">
-                <button>ZALOGUJ</button>
+                <button type ="submit">ZALOGUJ</button>
                 <button>REJESTRACJA</button>
             </form>
         </div>
