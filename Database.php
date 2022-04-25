@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 require_once 'config.php';
 class Database
 {
@@ -31,5 +32,10 @@ class Database
             die("Connection failed: ".$e->getMessage());
         }
     }
+=======
+
+class Database
+{
+>>>>>>> origin/routing-php
 
 }
