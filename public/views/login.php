@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type = "text/css" href="../css/styleLogin.css">
+    <link rel="stylesheet" type = "text/css" href="public/css/styleLogin.css">
     <title>LOGIN PAGE</title>
 </head>
 
 <body>
     <div class="container">
         <div class ="logo">
-            <img src="../img/bbLogo1.png">
+            <img src="public/img/bbLogo1.png">
         </div>
         <div class="login-container">
             <form>
