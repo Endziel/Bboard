@@ -14,5 +14,21 @@ class DefaultController extends AppController{
         $this->render('home');
 
     }
+
+    public function myGames() {
+        //TODO display mygames.php
+        $this->render('myGames');
+
+    }
+    public function search() {
+        //TODO display mygames.php
+        $this->render('search');
+
+    }
+    public function whereToBuyGames() {
+    //TODO display mygames.php
+    $this->render('whereToBuyGames');
+
+}
     
 }
