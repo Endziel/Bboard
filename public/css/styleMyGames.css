@@ -7,10 +7,8 @@ main{
 }
 
 .games{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 100 px;
 
 }
 

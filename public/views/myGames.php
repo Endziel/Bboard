@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() != PHP_SESSION_ACTIVE){
+    session_start();
+}
+//session_start();
 if(!isset($_SESSION['email'])) {
     header("location:logout");
 }
@@ -46,12 +49,24 @@ if(!isset($_SESSION['email'])) {
         </nav>
         <main>
             <section class="games">
-                <div id="game-1">
-                    <img src="public/img/uploads/catan.jpg">
-                    <div>
-                        <p>description</p>
+                <?php foreach ($games as $game) : ?>
+
+<!--                <section class="games">-->
+                    <div id="game-1">
+                        <img src="public/img/uploads/<?= $game->getImage() ?>">
+                        <div>
+                            <p><?= $game->getTitle(); ?></p>
+                        </div>
                     </div>
-                </div>
+
+    <?php endforeach; ?>
+
+
+
+<!--                $testGame = new GameRepository();-->
+<!--                $testGame->getGame('john.snow@pk.edu.pl');-->
+<!---->
+<!--                ?>-->
             </section>
         </main>
 </div>
