@@ -13,8 +13,8 @@ if(!isset($_SESSION['email'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type = "text/css" href="public/css/styleNavMenu.css">
     <link rel="stylesheet" type = "text/css" href="public/css/styleMyGames.css">
+    <link rel="stylesheet" type = "text/css" href="public/css/styleNavMenu.css">
 
     <title>myGames</title>
 </head>
@@ -48,25 +48,19 @@ if(!isset($_SESSION['email'])) {
             <script type="text/javascript" src = "./public/js/hamMenu.js">  </script>
         </nav>
         <main>
+
+
             <section class="games">
                 <?php foreach ($games as $game) : ?>
-
-<!--                <section class="games">-->
-                    <div id="game-1">
+                    <div class="game-1">
                         <img src="public/img/uploads/<?= $game->getImage() ?>">
-                        <div>
+                        <div class = "title">
                             <p><?= $game->getTitle(); ?></p>
                         </div>
                     </div>
 
     <?php endforeach; ?>
 
-
-
-<!--                $testGame = new GameRepository();-->
-<!--                $testGame->getGame('john.snow@pk.edu.pl');-->
-<!---->
-<!--                ?>-->
             </section>
         </main>
 </div>
