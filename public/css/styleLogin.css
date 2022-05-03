@@ -90,6 +90,11 @@ input{
 
 }
 
+.messages{
+    color: #FFFFFF;
+
+}
+
 /*@media only screen and (max-width: 600px){*/
 /*    form{*/
 /*        border-radius: 2.5em;*/

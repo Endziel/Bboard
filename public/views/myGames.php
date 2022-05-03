@@ -13,8 +13,9 @@ if(!isset($_SESSION['email'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type = "text/css" href="public/css/styleMyGames.css">
     <link rel="stylesheet" type = "text/css" href="public/css/styleNavMenu.css">
+    <link rel="stylesheet" type = "text/css" href="public/css/styleMyGames.css">
+
 
     <title>myGames</title>
 </head>
