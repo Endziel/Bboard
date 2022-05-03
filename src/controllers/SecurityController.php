@@ -32,7 +32,26 @@ class SecurityController extends AppController
             return $this->render('login',['messages' => ['Złe hasło']]);
         }
 
+        $cookie_name = $user->getName();
+
+        session_start();
+
+        $_SESSION['email'] = $email;
+        setcookie("user",$cookie_name,time() + (86400 * 30));
+
         return $this->render('home');
+
+
+    }
+
+    public function logout(){
+        session_start();
+
+        setcookie("user","",time() -10    );
+//        unset($_SESSION);
+
+        session_destroy();
+        return $this->render('login');
 
 
     }

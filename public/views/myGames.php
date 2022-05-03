@@ -1,22 +1,24 @@
 <?php
-if (!session_status() == PHP_SESSION_ACTIVE){
+if (session_status() != PHP_SESSION_ACTIVE){
     session_start();
 }
-if(!isset($_SESSION)) {
+//session_start();
+if(!isset($_SESSION['email'])) {
     header("location:logout");
 }
 ?>
+
 <!DOCTYPE html>
 
+<html lang="en">
 <head>
-    <link rel="stylesheet" type = "text/css" href="public/css/styleHome.css">
+    <meta charset="UTF-8">
     <link rel="stylesheet" type = "text/css" href="public/css/styleNavMenu.css">
+    <link rel="stylesheet" type = "text/css" href="public/css/styleMyGames.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>HOME</title>
+    <title>myGames</title>
 </head>
-
 <body>
     <div class="base-container">
         <nav class = "navigate">
@@ -44,31 +46,25 @@ if(!isset($_SESSION)) {
                 <button>MENU</button>
             </div>
 
-
             <script type="text/javascript" src = "./public/js/hamMenu.js">  </script>
         </nav>
         <main>
-            <div class="text-suggested">
-                <p>Propozycje na dziś:</p>
-            </div>
-            <section class = "suggested">
-                <div id = "suggest-1">
-                    <img src="public/img/uploads/catan.jpg">
-                    <p>description</p>
-                </div>
-                <div id = "suggest-2">
-                    <img src="public/img/uploads/catan.jpg">
-                    <p>description</p>
-                </div>
-                <div id = "suggest-3">
-                    <img src="public/img/uploads/catan.jpg">
-                    <p>description</p>
-                </div>
 
+
+            <section class="games">
+                <?php foreach ($games as $game) : ?>
+                    <div class="game-1">
+                        <img src="public/img/uploads/<?= $game->getImage() ?>">
+                        <div class = "title">
+                            <p><?= $game->getTitle(); ?></p>
+                        </div>
+                    </div>
+
+    <?php endforeach; ?>
 
             </section>
-
         </main>
-    </div>
+</div>
 
 </body>
+</html>
