@@ -9,9 +9,10 @@ class Game
     private $minimum_age;
     private $minimum_players;
     private $maximum_players;
+    private $difficulty_level;
 
 
-    public function __construct($title, $image, $minimum_time_minute, $average_time_minute, $minimum_age, $minimum_players, $maximum_players)
+    public function __construct($title, $image, $minimum_time_minute, $average_time_minute, $minimum_age, $minimum_players, $maximum_players, $difficulty_level)
     {
         $this->title = $title;
         $this->image = $image;
@@ -20,6 +21,7 @@ class Game
         $this->minimum_age = $minimum_age;
         $this->minimum_players = $minimum_players;
         $this->maximum_players = $maximum_players;
+        $this->difficulty_level = $difficulty_level;
     }
 
 
@@ -105,6 +107,17 @@ class Game
     {
         $this->maximum_players = $maximum_players;
     }
+
+    public function getDifficultyLevel()
+    {
+        return $this->difficulty_level;
+    }
+    public function setDifficultyLevel($difficulty_level)
+    {
+        $this->difficulty_level = $difficulty_level;
+    }
+
+
 
 
 }

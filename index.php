@@ -12,12 +12,16 @@ Routing::get('myGames' , 'GameController');
 Routing::get('search' , 'DefaultController');
 Routing::get('whereToBuyGames' , 'DefaultController');
 
+
+
 //Routing::get('getGame' , 'GameController');
 
 
 
 Routing::post('login' , 'SecurityController');
 Routing::post('logout' , 'SecurityController');
+Routing::post('searchForGames' , 'GameController');
+
 
 
 

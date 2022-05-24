@@ -17,6 +17,13 @@ main{
 
 }
 
+.messages{
+    text-align: center;
+    font: normal normal bold 4em Ebrima;
+    color: #45326A;
+
+}
+
 
 
 /*.games>div{*/
@@ -81,3 +88,4 @@ main{
 
 
 }
+
