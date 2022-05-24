@@ -6,7 +6,7 @@ class GameRepository extends Repository
     public function getGames(string $email): array
     {
         $stmt = $this->database->connect()->prepare(
-            'SELECT title,minimum_time_minute,average_time_minute,minimum_age,minimum_players,maximum_players,image from games join users_games ON games.id = users_games.id_game join users on users_games.id_user = users.id where email = :email order by title'
+            'SELECT title,minimum_time_minute,average_time_minute,minimum_age,minimum_players,maximum_players,image,difficulty_level from games join users_games ON games.id = users_games.id_game join users on users_games.id_user = users.id JOIN difficulty on difficulty.id = games.id_difficulty where email = :email order by title'
         )   ;
         $stmt->bindParam(':email',$email,PDO::PARAM_STR);
         $stmt->execute();
@@ -24,7 +24,8 @@ class GameRepository extends Repository
                     $game['average_time_minute'],
                     $game['minimum_age'],
                     $game['minimum_players'],
-                    $game['maximum_players']
+                    $game['maximum_players'],
+                    $game['difficulty_level']
                 );
             }
         }while($game != false);

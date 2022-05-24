@@ -49,6 +49,14 @@ if(!isset($_SESSION['email'])) {
             <script type="text/javascript" src = "./public/js/hamMenu.js">  </script>
         </nav>
         <main>
+            <div class="messages">
+                <?php if(isset($messages)){
+                    foreach ($messages as $message){
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
 
 
             <section class="games">
